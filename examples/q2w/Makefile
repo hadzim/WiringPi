@@ -28,11 +28,11 @@ endif
 
 #DEBUG	= -g -O0
 DEBUG	= -O3
-CC	?= gcc
-INCLUDE	= -I/usr/local/include
-CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe $(EXTRA_CFLAGS)
+CC	= gcc
+INCLUDE	= -I../wiringPi -I../devLib
+CFLAGS	= $(DEBUG) -Wall $(INCLUDE) -Winline -pipe
 
-LDFLAGS	= -L/usr/local/lib
+LDFLAGS	= -L../wiringPi -L../devLib
 LDLIBS    = -lwiringPi -lwiringPiDev -lpthread -lm
 
 ###############################################################################
